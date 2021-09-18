@@ -6,8 +6,8 @@ const {
 const ytdl = require('ytdl-core');
 
 
-const client = new Discord.Client();
-
+const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] })
+client.login(token);
 
 
 
@@ -24,4 +24,4 @@ client.once('disconnect', () => {
 });
 
 
-client.login(token);
+
